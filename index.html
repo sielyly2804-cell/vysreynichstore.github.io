@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novel STORE</title>
+    <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:white;
+    }
+    header {
+      background: white;
+      color: rgb(246, 245, 249);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .main-header {
+    display: flex; /* បើក flexbox */
+    justify-content: space-between; /* ដាក់ រទេះ (cart) នៅចុងខាងស្តាំ */
+    align-items: center; /* តម្រឹមធាតុតាមកម្ពស់ (បញ្ឈរ) */
+    padding: 30px 60px; /* រក្សា padding សម្រាប់គែម */
+}
+
+/* សម្រាប់រុំ Logo និង Nav ឲ្យនៅចំកណ្ដាល */
+.header-center {
+    display: flex;
+    flex-grow: 1; /* យកទំហំដែលនៅសល់ទាំងអស់ */
+    justify-content: center; /* ដាក់ logo និង nav នៅចំកណ្ដាល */
+    align-items: center;
+    text-align: center
+
+}
+.header-center {
+    display: flex;
+    flex-direction: column; /* This forces children (logo container and nav) to stack vertically */
+    align-items: center; /* To center the content horizontally */
+}
+.logo-image {
+    display: block;
+ align-items: center;
+    margin: 0 auto;
+    text-align: center
+}
+
+/* រចនាបថសម្រាប់ Logo (រូបភាព និងឈ្មោះ) */
+.logo-container {
+    display: flex;
+    align-items: center;
+    /* អាចបន្ថែម margin ខាងស្ដាំ ប្រសិនបើអ្នកចង់ឱ្យវាឃ្លាតពី nav */
+    margin-right: 100px; 
+}
+
+/* រចនាបថសម្រាប់រូបភាព logo */
+.header-logo {
+    text-align: center;
+    height: 100px; /* កំណត់កម្ពស់តាមទំហំដែលអ្នកចង់បាន */
+    width: auto;
+    margin:0 auto /* គម្លាតពីឈ្មោះហាង */
+}
+/* រចនាបថសម្រាប់ឈ្មោះហាង */
+.logo-text {
+    font-size: 50px;
+    color:rgb(240, 240, 248);; /* ពណ៌ដែលអ្នកចង់បាន */
+    margin: 70;
+    font-weight: bold;
+     margin-top: 30px;
+}
+    header h1 {
+      margin: 50;
+      align-items: center;
+      background: #14405e;
+    }
+    nav a {
+      color: rgb(240, 240, 248);
+      margin-left: 15px;
+       background: #14405e;
+      text-decoration:solid;
+      padding: auto;;
+      font-size: 30px;
+    
+    }
+    nav a :hover{
+      color: rgb(49, 21, 115);
+      text-shadow: #252128;
+        
+    }
+    .container {
+      padding: 20px;
+      align-items: center;
+      text-align: center;
+    }
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .book {
+      background: rgb(198, 236, 247);
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+    }
+    
+    .book img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 4px;
+      background: #252128;
+      
+    }
+    .book img:hover {
+      background-color: #14405e;
+    }
+    .book h3 {
+      margin: 10px 0 5px;
+    }
+    .price {
+      color: #27ae60;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      background:#2c3e50;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background:#0f1011;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+
+    <div class="header-center">
+        <div class="logo-top-container">
+            <img src="images/book logo.webp"
+             alt="Logo" class="header-logo-center">
+            <h1 class="logo-text">Novel STORE</h1>
+        </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Books</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    
+    <section id="home">
+      <h2>Welcome Novel Store</h2>
+      <p>
+        Discover a world of stories at <strong> Novel Store</strong>. We offer a carefully selected
+        collection of books for every reader. Whether you love romance, enjoy a good laugh,
+        feel thrilled by horror, or believe in magic, we have something special for you.
+      </p>
+    </section>
+
+    <section id="categories">
+      <h2>Book Categories</h2>
+      <div class="books">
+        <div class="book">
+            <h3>Romance</h3>
+            <button>View Romance Books</button>
+          <img src="images/lovely runner.webp" alt="images/lovely runner.webp">
+        <h3>LOVELY RUNNER</h3>
+        <p class="price">$12.00</p>
+        <button>BUY NOW</button>
+          <p>Love stories that touch your heart and soul.</p>
+          
+        </div>
+
+        <div class="book">
+          <h3>Funny</h3>
+          <button>View Funny Books</button>
+          <img src="images/funny stories.webp" alt="images/funny stories.webp">
+        <h3>MY BUDDIES</h3>
+        <p class="price">$10.00</p>
+        <button>BUY NOW</button>
+        <p>Light, humorous books to make you smile and laugh.</p>
+        </div>
+
+        <div class="book">
+          <h3>Horror</h3>
+          <button>View Horror Books</button>
+          <img src="images/ghost stories.webp" alt="images/ghost stories.webp">
+        <h3>THOSE SHADOW</h3>
+        <p class="price">$11.00</p>
+        <button>BUY NOW</button>
+           <p>Scary and thrilling stories for brave readers.</p>
+        </div>
+        
+
+        <div class="book">
+          <h3>Magic</h3>
+          <button>View Magic Books</button>
+          <img src="images/magic.jpg" alt="images/magic.jpg">
+        <h3>THE SON OF GOD</h3>
+        <p class="price">$18.00</p>
+        <button>BUY NOW</button>
+        <p>Fantasy and magical worlds full of adventure.</p>
+         
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>If you have questions or suggestions, feel free to contact us.</p>
+      <p><strong>Email:</stron>novelstore@email.com</p>
+      <p><strong>Phone:</strong>077 954 699</p>
+      <p><strong>Address:</strong> Battambang</p>
+    </section>
+    <FOOter>
+        <H3>© 2025 Novel store </H3>
+    </FOOter>
+</body>
+</html>
